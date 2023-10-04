@@ -1,3 +1,71 @@
+
+// // if using json file and useEffect hook to import the car data
+
+// import React, { useState, useEffect } from 'react';
+// import './App.css';
+// import SearchBar from './modules/search_bar';
+// import CarCardContainer from './modules/CarCardContainer';
+
+// function App() {
+//   const [searchResults, setSearchResults] = useState([]);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const carsPerPage = 6;
+//   const totalPages = 10;
+//   const [carData, setCarData] = useState([]);
+
+//   useEffect(() => {
+//     fetch('./carsData.json')
+//       .then((response) => response.json())
+//       .then((data) => setCarData(data))
+//       .catch((error) => console.error('Error fetching car data:', error));
+//   }, []);
+
+//   const handleSearch = (searchTerm) => {
+//     const filteredResults = carData
+//       .slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage)
+//       .filter((car) =>
+//         car.name.toLowerCase().includes(searchTerm.toLowerCase())
+//       );
+
+//     setSearchResults(filteredResults);
+//   };
+
+//   const handlePageChange = (newPage) => {
+//     if (newPage >= 1 && newPage <= totalPages) {
+//       setCurrentPage(newPage);
+//     }
+//   };
+
+//   return (
+//     <div className="App">
+//       <SearchBar onSearch={handleSearch} />
+
+//       <div className="search-results">
+//         <CarCardContainer
+//           cars={searchResults.length > 0 ? searchResults : carData.slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage)}
+//         />
+//       </div>
+
+//       <div className="pagination">
+//         <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+//           Previous
+//         </button>
+
+//         Page {currentPage} of {totalPages}
+
+//         <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+//           Next
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// if adding the data in the app.js
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import SearchBar from './modules/search_bar';
@@ -554,158 +622,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .
-// .
-// .
-// .
-// .
-// .
-// .
-// .
-// .
-// .
-// // if using json file to import the car data
-
-// import React, { useState, useEffect } from 'react';
-// import './App.css';
-// import SearchBar from './modules/search_bar';
-// import CarCardContainer from './modules/CarCardContainer';
-
-// function App() {
-//   const [searchResults, setSearchResults] = useState([]);
-//   const [currentPage, setCurrentPage] = useState(1);
-//   const carsPerPage = 6;
-//   const totalPages = 10;
-//   const [carData, setCarData] = useState([]);
-
-//   useEffect(() => {
-//     fetch('./carsData.json')
-//       .then((response) => response.json())
-//       .then((data) => setCarData(data))
-//       .catch((error) => console.error('Error fetching car data:', error));
-//   }, []);
-
-//   const handleSearch = (searchTerm) => {
-//     const filteredResults = carData
-//       .slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage)
-//       .filter((car) =>
-//         car.name.toLowerCase().includes(searchTerm.toLowerCase())
-//       );
-
-//     setSearchResults(filteredResults);
-//   };
-
-//   const handlePageChange = (newPage) => {
-//     if (newPage >= 1 && newPage <= totalPages) {
-//       setCurrentPage(newPage);
-//     }
-//   };
-
-//   return (
-//     <div className="App">
-//       <SearchBar onSearch={handleSearch} />
-
-//       <div className="search-results">
-//         <CarCardContainer
-//           cars={searchResults.length > 0 ? searchResults : carData.slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage)}
-//         />
-//       </div>
-
-//       <div className="pagination">
-//         <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-//           Previous
-//         </button>
-
-//         Page {currentPage} of {totalPages}
-
-//         <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-//           Next
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
