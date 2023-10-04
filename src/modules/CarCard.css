@@ -1,0 +1,31 @@
+.favorite-button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 5px;
+ }
+  
+.favorite-button.active {
+  color: red;
+}
+
+.favorite-button:hover {
+  color: red;
+  
+}
+  
+.rent-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.rent-button:hover {
+  background-color: #0056b3;
+}
+  
